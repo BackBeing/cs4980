@@ -1,14 +1,16 @@
 #include <complex>
-#include <unistd.h>
-#include <stdio.h>
+#include <unistd>
+#include <stdio>
 #include <string>
-#include <cstring>
-#include <stdlib.h>
+#include <stdlib>
 #include "wave.h"
 #define TRUE 1 
 #define FALSE 0
 
-using namespace std;
+
+
+
+#define M_PI 3.1415926535897932384
 
 
 // WAVE header structure
@@ -17,7 +19,7 @@ unsigned char buffer4[4];
 unsigned char buffer2[2];
 
 char* seconds_to_time(float seconds);
-int* read_array(int argcc, char **argvv, unsigned int & sampleN);
+int* read_array(int argcc, char **argvv, int * sampleN);
 
 
  FILE *ptr;
@@ -40,11 +42,11 @@ int main(int argc, char **argv)
 	
 	///////////////
 	//read from sound file
-	int * Karray;
+	int * K;
 	
-	unsigned int Ntrue = 0;
+	int Ntrue = 0;
 	
-	Karray = read_array( argc, argv, Ntrue);
+	K = read_array( argc, argv, & Ntrue);
 
 	int sampleN = 0 ;
 	
@@ -57,8 +59,8 @@ int main(int argc, char **argv)
 		sampleN ++;
 	}
 	
-	complex<double> ** Kgrps; // a group of sample groups
-	Kgrps = (complex<double> **)malloc( sampleN * sizeof(complex<double> *));
+	double ** Kgrps; // a group of sample groups
+	Kgrps = (double **)malloc( sampleN * sizeof(double *));
 	for (int i = 0; i< sampleN; i++){
 			Kgrps[i] = (complex<double> *)malloc(N * sizeof(complex<double>));
 	}
@@ -70,7 +72,6 @@ int main(int argc, char **argv)
 	
 	//set up W, which can be used for all sample groups
 	//TODO: build fixed W on board:// low
-	complex<double> * W;
 	W = (complex<double> *)malloc(N / 2 * sizeof(complex<double>));
     W[1] = polar(1., -2. * M_PI / N);
     W[0] = 1;
@@ -122,14 +123,13 @@ int main(int argc, char **argv)
 	
 }
 
-int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
+int* read_array(int argcc, char **argvv, int & sampleN) {
 
  filename = (char*) malloc(sizeof(char) * 1024);
  if (filename == NULL) {
    printf("Error in malloc\n");
    exit(1);
  }
- 
 
  // get file path
  char cwd[1024];
@@ -259,7 +259,6 @@ int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
  // calculate no.of samples
  long num_samples = 8 * (header.overall_size - 38) / (header.channels * header.bits_per_sample);
  //printf("Number of samples:%lu \n", num_samples);
- sampleN = 8 * (header.overall_size - 38) / (header.channels * header.bits_per_sample);
 
  long size_of_each_sample = (header.channels * header.bits_per_sample) / 8;
  //printf("Size of each sample:%ld bytes\n", size_of_each_sample);
@@ -269,10 +268,7 @@ int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
  //printf("Approx.Duration in seconds=%f\n", duration_in_seconds);
  //printf("Approx.Duration in h:m:s=%s\n", seconds_to_time(duration_in_seconds));
 
- 
 
- int* array_of_samples;
- array_of_samples = (int *)malloc ( num_samples * header.channels * sizeof(int) );
 
  // read each sample from data chunk if PCM
  if (header.format_type == 1) { // PCM
@@ -314,9 +310,10 @@ int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
 
 			//printf("\n\n.Valid range for data values : %ld to %ld \n", low_limit, high_limit);
 
+			sampleN = num_samples;
 			
-			
-			
+			int* array_of_samples;
+			array_of_samples = (int *)malloc ( num_samples * header.channels * sizeof(int) );
 			
 			
 			for (i =1; i <= num_samples; i++) {
