@@ -17,7 +17,7 @@ unsigned char buffer4[4];
 unsigned char buffer2[2];
 
 char* seconds_to_time(float seconds);
-int* read_array(int argcc, char **argvv, unsigned int & sampleN);
+int* read_array(int argcc, char **argvv, unsigned int & sampleN, unsigned int & channelN);
 
 
  FILE *ptr;
@@ -27,27 +27,32 @@ int* read_array(int argcc, char **argvv, unsigned int & sampleN);
 //////////////////////////////////////////////////////////
 // Sampling frequency = 44100 Hz
 // Sampling Resolution = 16 bits   65 536 = 2^16
-// 		so for each real time sec of sound my program will 
-// send ~2/3 of the data to be transformed, so it will have 
-// 17536 * (n - 1) overlapped data for n secs sound.
-// I will basically add the related overlapped sound together 
-// and /2. 
+//////////////////////////////////////////////////////////
 
 int main(int argc, char **argv)
 {
 	
 	int N = 65536;
+	///////e.g. 2 channel 5 Ntrue 10 data
+	/////// 1 2 3 4 5
+	///////	6 7 8 9 10
+	///////the Karray will be 1 2 3 4 5 6 7 8 9 10
 	
 	///////////////
 	//read from sound file
+	//we assume the file will only have two channels!
+	//and we will just modify one of the channel.
 	int * Karray;
 	
 	unsigned int Ntrue = 0;
+	unsigned int channelN = 0;
 	
-	Karray = read_array( argc, argv, Ntrue);
+	//The wave file is now in an array: Karray!!!!
+	//Ntrue is the sample numbers
+	Karray = read_array( argc, argv, Ntrue, channelN );
 
 	int sampleN = 0 ;
-	
+	unsigned int Ntruecpy = Ntrue;
 	while ( Ntrue >= 65536 ){
 		Ntrue -= 65536;
 		sampleN ++;
@@ -56,17 +61,33 @@ int main(int argc, char **argv)
 	if( Ntrue > 0 ){
 		sampleN ++;
 	}
+
+/** check point
+	printf("sample group numbers (divided by 65536): %d\n", sampleN);
+	printf("sample numbers: %d\n", Ntruecpy);
+**/
 	
-	complex<double> ** Kgrps; // a group of sample groups
+	complex<double> ** Kgrps; // a group of sample groups devided by 65536
 	Kgrps = (complex<double> **)malloc( sampleN * sizeof(complex<double> *));
 	for (int i = 0; i< sampleN; i++){
-			Kgrps[i] = (complex<double> *)malloc(N * sizeof(complex<double>));
+		Kgrps[i] = (complex<double> *)malloc(N * sizeof(complex<double>));
+		
+		for(int j = 0; j< N; j++){
+			if ( (i * N + j) < Ntruecpy ){
+				Kgrps[i][j] = complex<double>(double(1.0 * Karray[ (i * N + j)]),0.0);	
+				//printf("expected sample number real: %1f image: 0 \n", real(Kgrps[i][j]));
+			}else{
+				Kgrps[i][j] = (0.0,0.0);	
+			}	
+		}
 	}
 	
-	double * K; // a sample group
-	K = (double *)malloc(N * sizeof(double));
-	
-	//TODO: give K, KK value here:// high
+/** check point
+	for (int i = 0; i< sampleN; i++){
+		printf("expected sample number real: %d image: 0 \n", Karray[ (i * N) ]);
+		printf("sample number real: %1f  image: %1f \n", real(Kgrps[i][0]), imag(Kgrps[i][0]))	;	
+	}
+**/	
 	
 	//set up W, which can be used for all sample groups
 	//TODO: build fixed W on board:// low
@@ -87,13 +108,21 @@ int main(int argc, char **argv)
 				tKgrps[i][j] = Kgrps[i][j];
 			}
 	}
-	
+	printf("Data transformed..\n");
 	
 	//TODO: pass tKgrps real, tKgrps imag, W real, W imag, and N(maybe), sampleN to board for FFT convert:// high
 	
 	//TODO: get tKgrpsNew back from board:// high
 	
-	
+	//here just pass Kgrps to tKgrpsNew
+	complex<double> ** tKgrpsNew;
+	tKgrpsNew = (complex<double> **)malloc( sampleN * sizeof(complex<double> *));
+	for (int i = 0; i< sampleN; i++){
+			tKgrpsNew[i] = (complex<double> *)malloc(N * sizeof(complex<double>));
+			for (int j = 0; j< N; j++){
+				tKgrpsNew[i][j] = Kgrps[i][j];
+			}
+	}
 	
 	
 	//TODO: do high/low filter and sound effect things on tKgrpsNew:// high 
@@ -106,11 +135,32 @@ int main(int argc, char **argv)
 	
 	//TODO: get tKgrpsNewNew back from board:// high
 	
+	//here just pass Kgrps to tKgrpsNewNew
+	complex<double> ** tKgrpsNewNew;
+	tKgrpsNewNew= (complex<double> **)malloc( sampleN * sizeof(complex<double> *));
+	for (int i = 0; i< sampleN; i++){
+			tKgrpsNewNew[i] = (complex<double> *)malloc(N * sizeof(complex<double>));
+			for (int j = 0; j< N; j++){
+				tKgrpsNewNew[i][j] = Kgrps[i][j];
+			}
+	}
 	
 	
-	
-	//TODO: rebuild real time sound files on the tKgrpsNewNew
-	
+	//rebuilding the sound array Karray
+	for (int i = 0; i< sampleN; i++){
+		for (int j = 0; j< N; j++){
+			if ( (i * N + j) < Ntruecpy ){
+				Karray[ (i * N + j)] = (int) real(Kgrps[i][j]);	
+			}else{
+				//do nothing
+			}	
+		}
+	}
+	//TODO: write to a wave file:// medium
+
+
+
+
 	// free
 	for (int i = 0; i< sampleN; i++){
 			free(Kgrps[i]);
@@ -122,7 +172,7 @@ int main(int argc, char **argv)
 	
 }
 
-int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
+int* read_array(int argcc, char **argvv, unsigned int & sampleN, unsigned int & channelN) {
 
  filename = (char*) malloc(sizeof(char) * 1024);
  if (filename == NULL) {
@@ -149,7 +199,7 @@ int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
  }
 
  // open file
- printf("Opening  file..\n");
+ printf("Opening file..\n");
  ptr = fopen(filename, "rb");
  if (ptr == NULL) {
 	printf("Error opening file\n");
@@ -209,6 +259,7 @@ int* read_array(int argcc, char **argvv, unsigned int & sampleN) {
 
  header.channels = buffer2[0] | (buffer2[1] << 8);
  //printf("(23-24) Channels: %u \n", header.channels);
+ channelN = header.channels;
 
  read = fread(buffer4, sizeof(buffer4), 1, ptr);
  //printf("%u %u %u %u\n", buffer4[0], buffer4[1], buffer4[2], buffer4[3]);
