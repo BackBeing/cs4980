@@ -2,15 +2,15 @@
 
 
 module SoundLoop(
-    input [63:0] KgrpsReal [15:0],
-	input [63:0] KgrpsImag [15:0],
-	input [63:0] WReal [14:0],
-	input [63:0] WImag [14:0],
+    input [63 :0] KgrpsReal [15:0],
+	input [63 :0] KgrpsImag [15:0],
+	input [63 :0] WReal [14:0],
+	input [63 :0] WImag [14:0],
 	input In,
-    output [63:0] KgrpsNewReal [15:0],
-	output [63:0] KgrpsNewImag [15:0],
     input Clock,
-    input Areset
+    input Areset,
+    output [63 :0] KgrpsNewReal [15:0],
+    output [63 :0] KgrpsNewImag [15:0]
     );
     
 	//for(int j = 0; j < log2(N); j++) {
@@ -24,6 +24,24 @@ module SoundLoop(
 	//	}
 	//}
 	
+	/*
+	reg [63:0] mem_kr [15:0];
+    initial begin
+    $readmemb("KgrpsRealDat", mem_2d);
+    end
+    reg [63:0] mem_ki [15:0];
+    initial begin
+    $readmemb("KgrpsImagDat", mem_2d2);
+    end
+    reg [63:0] mem_wr [14:0];
+    initial begin
+    $readmemb("WRealDat", mem_2d2);
+    end
+    reg [63:0] mem_wi [14:0];
+    initial begin
+    $readmemb("WImagDat", mem_2d2);
+    end    
+    */
     // state encodings
     parameter s000 = 3'b000; //didn't enter j loop
 	parameter s001 = 3'b001; //enter j loop and j = log2(N)
@@ -55,7 +73,9 @@ module SoundLoop(
 	
 	//holding the value of i and j
 	logic [16:0] i;
+	logic [16:0] nexti;
 	logic [4:0] j;
+	logic [4:0] nextj;
 	
 	//temp double holds
 	logic [63:0] tempReal;
@@ -69,8 +89,12 @@ module SoundLoop(
     always_ff@(posedge Clock) begin
         if (Areset == 1'b0) begin
             state <= s000;
+            i <= pp;
+            j <= 4'b1111;
         end else begin
             state <= nextState;
+            i <= nexti;
+            j <= nextj;
         end
     end
     
@@ -80,27 +104,38 @@ module SoundLoop(
     // Next state logic
     always_comb begin
         case(state)
-        s000 : if (In == 1'b0) begin
-                    nextState = s000;
-                    i = pp;
-                    j = 4'b1111;
-                    end
-            else nextState = s010;
-        s001 : nextState = s111;
+        s000 : begin
+                 nexti = pp;
+                 nextj = 4'b1111; 
+                 if (In == 1'b1) nextState = s000;
+                 else nextState = s010;
+               end
+        s001 : begin
+                nexti = i;
+                nextj = j;
+                nextState = s111;
+               end
         s010 : begin
-                i = pp;
+                nexti = pp;
+                nextj = j;
                 nextState = s100;
                 end
         s011 : begin
-                j = j - 1;
-				if (j == 0) nextState = s001;
+                nexti = i;
+                nextj = j - 1;
+				if (nextj == 0) nextState = s001;
 				else nextState = s010;
 			    end
-		s100 : if (i & n) nextState = s101;
-				else nextState = s110;
+		s100 : begin 
+		          nexti = i;
+                  nextj = j;
+		          if (i & n) nextState = s101;
+				  else nextState = s110;
+			     end
         s101 : begin
-                i = i - 1;
-				if (i == 0) nextState = s011;
+                nexti = nexti - 1;
+                nextj = j;
+				if (nexti == 0) nextState = s011;
 				else nextState = s010;
 				end
         s110 : begin
@@ -134,12 +169,17 @@ module SoundLoop(
 				//all the actual computer steps
 				//not assigned sign +/-
 				
-				i = i - 1;
-				if (i == 0) nextState = s011;
+				nexti = i - 1;
+				nextj = j;
+				if (nexti == 0) nextState = s011;
 				else nextState = s010;
 				end
-        s111 : if (In == 1'b0) nextState = s000;
+        s111 : begin
+                nexti = i;
+                nextj = j;
+                if (In == 1'b0) nextState = s000;
 				else nextState = s111;
+				end
         endcase
     end
 endmodule

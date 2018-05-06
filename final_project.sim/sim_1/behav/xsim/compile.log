@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SoundLoopTest
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:14]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:15]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:19]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:20]
+WARNING: [VRFC 10-756] identifier user_reset is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:23]
+WARNING: [VRFC 10-756] identifier user_reset is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:25]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:26]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:27]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:31]
+WARNING: [VRFC 10-756] identifier counter_dataout is used before its declaration [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv:32]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Ma/Documents/GitHub/cs4980/final_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
