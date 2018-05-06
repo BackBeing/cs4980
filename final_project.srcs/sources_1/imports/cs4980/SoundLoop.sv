@@ -129,7 +129,8 @@ module SoundLoop(
 		s100 : begin 
 		          nexti = i;
                   nextj = j;
-		          if (i & n) nextState = s101;
+                  qq = pp - i;
+		          if (qq & n) nextState = s101;
 				  else nextState = s110;
 			     end
         s101 : begin
