@@ -107,7 +107,7 @@ module SoundLoop(
         s000 : begin
                  nexti = pp;
                  nextj = 4'b1111; 
-                 if (In == 1'b1) nextState = s000;
+                 if (In == 1'b0) nextState = s000;
                  else nextState = s010;
                end
         s001 : begin
