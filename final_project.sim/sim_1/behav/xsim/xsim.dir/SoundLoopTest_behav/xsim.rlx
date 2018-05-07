@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3032602286462641101  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 3b9492ccf3be42c397beba4dfd5b6f81 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SoundLoopTest_behav xil_defaultlib.SoundLoopTest xil_defaultlib.glbl" , 
+    buildDate : "Jan 30 2018" , 
+    buildTime : "15:48:17" , 
+    linkCmd : "E:\\xlinx\\Vivado\\2017.4\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/SoundLoopTest_behav/xsimk.exe\"   \"xsim.dir/SoundLoopTest_behav/obj/xsim_0.win64.obj\" \"xsim.dir/SoundLoopTest_behav/obj/xsim_1.win64.obj\" \"E:\\xlinx\\Vivado\\2017.4\\lib\\win64.o\\\\librdi_simulator_kernel.dll\" \"E:\\xlinx\\Vivado\\2017.4\\lib\\win64.o\\\\librdi_simbridge_kernel.dll\"" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

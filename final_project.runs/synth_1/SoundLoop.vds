@@ -1,0 +1,508 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Sun May  6 19:08:51 2018
+# Process ID: 16568
+# Current directory: C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/synth_1
+# Command line: vivado.exe -log SoundLoop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SoundLoop.tcl
+# Log file: C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/synth_1/SoundLoop.vds
+# Journal file: C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source SoundLoop.tcl -notrace
+Command: synth_design -top SoundLoop -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 852 
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:48]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:49]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:50]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:51]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:52]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:54]
+WARNING: [Synth 8-2507] parameter declaration becomes local in SoundLoop with formal parameter declaration list [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:55]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 356.238 ; gain = 112.078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SoundLoop' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:4]
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter s000 bound to: 3'b000 
+	Parameter s001 bound to: 3'b001 
+	Parameter s010 bound to: 3'b010 
+	Parameter s011 bound to: 3'b011 
+	Parameter s100 bound to: 3'b100 
+	Parameter s101 bound to: 3'b101 
+	Parameter s110 bound to: 3'b110 
+	Parameter s111 bound to: 3'b111 
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[15]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[14]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[13]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[12]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[11]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[10]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[9]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[8]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[7]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[6]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[5]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[4]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[3]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[2]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[1]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewReal_reg[0]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[15]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[14]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[13]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[12]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[11]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[10]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[9]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[8]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[7]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[6]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[5]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[4]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[3]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[2]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[1]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-87] always_comb on 'KgrpsNewImag_reg[0]' did not result in combinational logic [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+INFO: [Synth 8-256] done synthesizing module 'SoundLoop' (1#1) [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:4]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 394.227 ; gain = 150.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 394.227 ; gain = 150.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 394.227 ; gain = 150.066
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:107]
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "KgrpsNewReal_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[15]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[14]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[13]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[12]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[11]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[10]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[9]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[8]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[7]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[6]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[5]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[4]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[3]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[2]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[1]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewReal_reg[0]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:166]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[15]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[14]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[13]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[12]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[11]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[10]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[9]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[8]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[7]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[6]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[5]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[4]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[3]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[2]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[1]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+WARNING: [Synth 8-327] inferring latch for variable 'KgrpsNewImag_reg[0]' [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:167]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 394.227 ; gain = 150.066
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   3 Input     64 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Multipliers : 
+	                63x63  Multipliers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 32    
+	   8 Input     17 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 17    
+	   2 Input      1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module SoundLoop 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   3 Input     64 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Multipliers : 
+	                63x63  Multipliers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 32    
+	   8 Input     17 Bit        Muxes := 4     
+	   8 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 17    
+	   2 Input      1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nextState" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:158]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sources_1/imports/cs4980/SoundLoop.sv:162]
+DSP Report: Generating DSP p_0_out, operation Mode is: A*(B:0x7fff).
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: PCIN+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: Generating DSP p_0_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+DSP Report: operator p_0_out is absorbed into DSP p_0_out.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|SoundLoop   | A*(B:0x7fff)   | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | PCIN+A*B       | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SoundLoop   | (PCIN>>17)+A*B | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |    12|
+|2     |CARRY4  |   122|
+|3     |DSP48E1 |    33|
+|4     |LUT1    |    18|
+|5     |LUT2    |   367|
+|6     |LUT3    |  2125|
+|7     |LUT4    |    73|
+|8     |LUT5    |   273|
+|9     |LUT6    |  1840|
+|10    |MUXF7   |   263|
+|11    |MUXF8   |   130|
+|12    |FDRE    |     5|
+|13    |FDSE    |    44|
+|14    |LD      |  2048|
+|15    |IBUF    |  3971|
+|16    |OBUF    |  2070|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       | 13394|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 757.699 ; gain = 513.539
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 757.699 ; gain = 513.539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 757.699 ; gain = 513.539
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6567 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'SoundLoop' is not ideal for floorplanning, since the cellview 'SoundLoop' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization

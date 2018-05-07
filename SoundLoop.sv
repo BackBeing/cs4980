@@ -1,16 +1,18 @@
 `timescale 1ns / 1ps
 
 
-module SoundLoop(
-    input [63 :0] KgrpsReal [15:0],
-	input [63 :0] KgrpsImag [15:0],
-	input [63 :0] WReal [14:0],
-	input [63 :0] WImag [14:0],
+module SoundLoop #(parameter WIDTH=64)(
+    input [WIDTH - 1 :0] KgrpsReal [15:0],
+	input [WIDTH - 1 :0] KgrpsImag [15:0],
+	input [WIDTH - 1 :0] WReal [14:0],
+	input [WIDTH - 1 :0] WImag [14:0],
 	input In,
     input Clock,
     input Areset,
-    output [63 :0] KgrpsNewReal [15:0],
-    output [63 :0] KgrpsNewImag [15:0]
+    output logic [16:0] i,
+    output logic [4:0] j,
+    output logic [WIDTH - 1 :0] KgrpsNewReal [15:0],
+    output logic [WIDTH - 1 :0] KgrpsNewImag [15:0]
     );
     
 	//for(int j = 0; j < log2(N); j++) {
@@ -56,8 +58,7 @@ module SoundLoop(
 	reg signed [16:0] pp = 17'b01111111111111111;
 	reg signed [15:0] kk = 16'b0111111111111111;
 	
-	logic [63:0] KgrpsNewReal [15:0];
-    logic [63:0] KgrpsNewImag [15:0];
+
 	
 	
 	logic [16:0] qq;
@@ -72,18 +73,18 @@ module SoundLoop(
     logic [2:0] nextState;
 	
 	//holding the value of i and j
-	logic [16:0] i;
+
 	logic [16:0] nexti;
-	logic [4:0] j;
+
 	logic [4:0] nextj;
 	
 	//temp double holds
-	logic [63:0] tempReal;
-	logic [63:0] tempImag;
-	logic [63:0] temp2Real;
-	logic [63:0] temp2Imag;
+	logic [WIDTH - 1:0] tempReal;
+	logic [WIDTH - 1:0] tempImag;
+	logic [WIDTH - 1:0] temp2Real;
+	logic [WIDTH - 1:0] temp2Imag;
 	
-	logic [126:0] longdoubletp;
+	logic [WIDTH * 2 :0] longdoubletp;
 	logic signal;
     
     always_ff@(posedge Clock) begin
