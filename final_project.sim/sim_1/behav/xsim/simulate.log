@@ -1,0 +1,26 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Error: Expected:  65535, Actual:      x
+Time: 60 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 110 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 130 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 140 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:      65534, Actual:      x
+Time: 150 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 160 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 170 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:      65534, Actual:      x
+Time: 180 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 190 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 200 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:  65535, Actual:      x
+Time: 210 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
+Error: Expected:      65534, Actual:      x
+Time: 220 ns  Iteration: 0  Process: /SoundLoopTest/Initial19_1  File: C:/Users/Ma/Documents/GitHub/cs4980/final_project.srcs/sim_1/imports/cs4980/SoundLoopTest.sv
