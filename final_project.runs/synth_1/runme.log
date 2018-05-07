@@ -505,3 +505,16 @@ INFO: [Netlist 29-17] Analyzing 6567 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'SoundLoop' is not ideal for floorplanning, since the cellview 'SoundLoop' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2048 instances were transformed.
+  LD => LDCE: 2048 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:53 . Memory (MB): peak = 757.699 ; gain = 526.402
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/synth_1/SoundLoop.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SoundLoop_utilization_synth.rpt -pb SoundLoop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.197 . Memory (MB): peak = 757.699 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May  6 19:09:52 2018...

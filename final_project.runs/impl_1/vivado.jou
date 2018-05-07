@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4.1 (64-bit)
+# SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+# IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
+# Start of session at: Sun May  6 19:10:10 2018
+# Process ID: 13480
+# Current directory: C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/impl_1
+# Command line: vivado.exe -log SoundLoop.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SoundLoop.tcl -notrace
+# Log file: C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/impl_1/SoundLoop.vdi
+# Journal file: C:/Users/Ma/Documents/GitHub/cs4980/final_project.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source SoundLoop.tcl -notrace
