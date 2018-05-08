@@ -2,10 +2,10 @@
 
 
 module SoundLoop #(parameter WIDTH=64)(
-    input [WIDTH - 1 :0] KgrpsReal [15:0],
-	input [WIDTH - 1 :0] KgrpsImag [15:0],
-	input [WIDTH - 1 :0] WReal [14:0],
-	input [WIDTH - 1 :0] WImag [14:0],
+    logic [WIDTH - 1 :0] KgrpsReal [15:0],
+	logic [WIDTH - 1 :0] KgrpsImag [15:0],
+	logic [WIDTH - 1 :0] WReal [14:0],
+	logic [WIDTH - 1 :0] WImag [14:0],
 	input In,
     input Clock,
     input Areset,
